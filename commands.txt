@@ -1,0 +1,72 @@
+Site:
+https://www.dfrobot.com/blog-13903.html
+
+
+Bash:
+# enter desired path and folder
+cd D:\Learning\YOLOv8   # cd DiskName:\path\FolderName
+
+
+# to create a new virtual environment
+conda create -n yolo8test python==3.8   # will install in default Anaconda folder on C:
+conda create --prefix "D:\Learning\YOLOv8\yolo8test" python=3.8 # to install in custom folder
+
+
+# to activate the environment
+conda activate yolo8test
+
+
+# to deactivate the environment
+conda deactivate
+
+
+# to install the ultralytics package from PyPi, when virtual env is activated
+pip install ultralytics
+
+
+# to check version - in Bash:
+pip show ultralytics
+
+python
+>>> import ultralytics
+>>> print(ultralytics.__version__)
+
+# to check version - in Python program:
+import ultralytics
+print(ultralytics.__version__)
+
+
+# install latest compatible with CUDA version on PyTorch site - here for CUDA v11.8 (2.7 GB)
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+
+
+# check for updates/upgrades of pytorch etc.
+pip install --upgrade torch torchvision torchaudio
+
+
+# uninstall pytorch etc.
+pip uninstall torch torchvision torchaudio
+
+
+# check of the system variables
+echo %CUDA_HOME%
+echo %CUDA_PATH%
+
+
+# set up of the system variables manually
+set CUDA_HOME=C:\path-to-folder\NvidiaFolderName    # example -> C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8
+set CUDA_PATH=%CUDA_HOME%
+
+
+# to check if pytorch detects CUDA - in Python program (see cuda_torch.py):
+import torch
+import os
+
+print(torch.cuda.is_available())
+print(torch.cuda.device_count())
+
+os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+print(os.environ['CUDA_VISIBLE_DEVICES'])
+
+print(torch.cuda.current_device())
