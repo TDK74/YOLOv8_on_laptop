@@ -13,7 +13,7 @@ model = YOLO('yolov8m.pt').to('cuda')  # transfer the model to GPU
 cam = cv2.VideoCapture(0)
 
 if not cam.isOpened():
-    print("error")
+    print("Error opening camera.")
     exit()
 
 width = int(cam.get(cv2.CAP_PROP_FRAME_WIDTH))
