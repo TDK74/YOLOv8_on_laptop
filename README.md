@@ -22,15 +22,17 @@ Quickly Run YOLOv8 for Real-Time Recognition on a Laptop.
 
 My laptop has a NVIDIA Quadro P2000 and CUDA v6.1.
 
-I had no problems to deploy it on the CPU, but I had some struggles and met difficulties to run it on CUDA (the graphical card) at once.
+There were no problems to deploy the models on the CPU, but I had some struggles to run them on CUDA (the graphical card).
 
 I couldn't find so old PyTorch wheel for my CUDA version (went back to wheels for CUDA v7.5).
 
 See **_commands.txt_** and **_pip_freeze.txt_** for more details if interested.
 
-I also did certain refactoring of the code.
+Certain refactoring of the code was done by me.
 
 ## Note
+
+The branches will be left unmerged to the master in order to get the files from Objects Detection, Segmentation and Pose Detection easily distinguished.
 
 Only YOLOv8 on a laptop for the moment.
 
