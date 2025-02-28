@@ -7,6 +7,8 @@ Quickly Run YOLOv8 for Real-Time Recognition on a Laptop.
 
 I had no problems to deploy it on the CPU but I had some strugles and met defficulties to run it on CUDA (the graphical card).
 
+I also did certain refactoring of the code.
+
 # Setup Environment
 * Laptop: Fujitsu Celcius H780
 * Operating System: Windows 10 Pro x64
