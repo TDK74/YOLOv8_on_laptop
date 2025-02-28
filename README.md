@@ -14,6 +14,8 @@ I also did certain refactoring of the code.
 * Operating System: Windows 10 Pro x64
 * Software: Python 3.8 (virtual env), 3.10, 3.11, 3.12 (Anaconda)
 * Environment: Anaconda
+* Detections models: YOLOv8n, YOLOv8s, YOLOv8m
+* Segmentation models: YOLOv8n-seg, YOLOv8s-seg, YOLOv8m-seg
 
 My laptop has a NVIDIA Quadro P2000 and CUDA v6.1.
 
