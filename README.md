@@ -1,7 +1,7 @@
 # YOLOv8_on_laptop
 Quickly Run YOLOv8 for Real-Time Recognition on a Laptop.
 
-* Based on the tutorial on this site:
+* Based on the guide from this site:
 
 <https://www.dfrobot.com/blog-13903.html>
 
