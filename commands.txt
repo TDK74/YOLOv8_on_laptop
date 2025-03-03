@@ -9,7 +9,7 @@ cd D:\Learning\YOLOv8   # cd DiskName:\path\FolderName
 
 # to create a new virtual environment
 conda create -n yolo8test python==3.8   # will install in default Anaconda folder on C:
-conda create --prefix "D:\Learning\YOLOv8\yolo8test" python=3.8 # to install in custom folder
+conda create --prefix "D:\Learning\YOLOv8\yolo8test" python==3.8 # to install in custom folder
 
 
 # to activate the environment
