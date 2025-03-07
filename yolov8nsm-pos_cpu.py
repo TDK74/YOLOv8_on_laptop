@@ -22,19 +22,19 @@ height = int(cam.get(cv2.CAP_PROP_FRAME_HEIGHT))
 
 fps = 0
 
-def fps_calculation(fps, start_time, end_time):
-    loop_time = end_time - start_time
+def fps_calculation(s_time, e_time):
+    loop_time = e_time - s_time
     fps_func = 1 / loop_time
 
     return fps_func
 
 
-def objects_processing(frame):
-    results = model(frame, device='cpu')
+def objects_processing(framework):
+    results = model(framework, device='cpu')
 
     for result in results:
         pil_image = Image.fromarray(results[0].plot())
-        frame = np.array(pil_image)
+        framework = np.array(pil_image)
         boxes = result.boxes.xyxy.cpu().numpy()
         confidences = result.boxes.conf.cpu().numpy()
         class_ids = result.boxes.cls.cpu().numpy().astype(int)
@@ -46,9 +46,9 @@ def objects_processing(frame):
             class_id = class_ids[i]
             label = result.names[class_id]
 
-    frame = cv2.resize(frame, (640, 480))
+    framework = cv2.resize(framework, (640, 480))
 
-    return frame
+    return framework
 
 
 try:
@@ -63,7 +63,7 @@ try:
         frame = objects_processing(frame)
 
         end_time = time()
-        fps = fps_calculation( fps, start_time, end_time)
+        fps = fps_calculation(start_time, end_time)
 
         cv2.putText(frame, f'FPS: {int(fps)}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
         cv2.imshow('YOLOv8n-pos Real-time', frame)
