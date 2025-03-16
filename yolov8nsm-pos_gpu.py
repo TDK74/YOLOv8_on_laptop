@@ -23,6 +23,9 @@ height = int(cam.get(cv2.CAP_PROP_FRAME_HEIGHT))
 fps = 0
 
 def fps_calculation(s_time, e_time):
+    """
+    Calculate frames per second.
+    """
     loop_time = e_time - s_time
     fps_func = 1 / loop_time
 
@@ -30,6 +33,9 @@ def fps_calculation(s_time, e_time):
 
 
 def objects_processing(framework):
+    """
+    Process detected objects and draw bounding boxes on the frame.
+    """
     results = model(framework, device='cuda')  # use of GPU for processing
 
     for result in results:
@@ -66,9 +72,9 @@ try:
         fps = fps_calculation(start_time, end_time)
 
         cv2.putText(frame, f'FPS: {int(fps)}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
-        cv2.imshow('YOLOv8n-pos Real-time', frame)
+        #cv2.imshow('YOLOv8n-pos Real-time', frame)
         #cv2.imshow('YOLOv8s-pos Real-time', frame)
-        #cv2.imshow('YOLOv8m-pos Real-time', frame)
+        cv2.imshow('YOLOv8m-pos Real-time', frame)
 
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
