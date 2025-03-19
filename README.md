@@ -1,5 +1,5 @@
-# YOLOv8_on_laptop
-Quickly Run YOLOv8 for Real-Time Recognition on a Laptop.
+# YOLOv8 on laptop
+Quickly Run YOLOv8 for Real-Time Recognition on laptop.
 
 * Based on the guide from this site:
 
@@ -30,10 +30,10 @@ See **_commands.txt_** and **_pip_freeze.txt_** for more details if interested.
 
 Certain refactoring of the code was done by me.
 
-## Note
+## Notes
 
 The branches will be left unmerged to the master in order to get the files from Objects Detection, Segmentation and Pose Detection easily distinguished.
 
-Only YOLOv8 on a laptop for the moment.
+Only YOLOv8 on laptop for the moment.
 
 Next will be on Nvidia Jetson Nano (4 GB RAM) or on Raspberry Pi 4B (2 GB RAM).
